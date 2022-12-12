@@ -49,6 +49,44 @@ header {
     }
   }
 }
+#button {
+  display: inline-block;
+  background-color: #2438DAD6;
+  width: 50px;
+  height: 50px;
+  text-align: center;
+  border-radius: 40%;
+  position: fixed;
+  bottom: 15%;
+  right: 20px;
+  transition: background-color .3s,
+  opacity .5s, visibility .5s;
+  opacity: 0;
+  visibility: hidden;
+  z-index: 100;
+  text-decoration: none;
+}
+#button::after {
+  content: "\f3bf";
+  font-family: "Font Awesome 6 Free";
+  font-weight: 900;
+  font-style: normal;
+  font-size: 1.5em;
+  line-height: 50px;
+  color: #fff;
+}
+#button:hover {
+  cursor: pointer;
+  background-color: #0af8b9;
+}
+#button:active {
+  background-color: #555;
+}
+#button.show {
+  opacity: 1;
+  visibility: visible;
+}
+
 .new_phones {
   background: #DCE5E2;
   border-radius: 32px;
@@ -550,15 +588,15 @@ footer {
         margin-bottom: 78px;
       }
     }
-  }
-  a {
-    font-family: 'Inter';
-    font-style: normal;
-    font-weight: 400;
-    font-size: 17px;
-    line-height: 22px;
-    color: #000000;
-    text-decoration: none;
+    a {
+      font-family: 'Inter';
+      font-style: normal;
+      font-weight: 400;
+      font-size: 17px;
+      line-height: 22px;
+      color: #000000;
+      text-decoration: none;
+    }
   }
   .by_arrow {
     padding: 0px 35px ;
@@ -573,6 +611,13 @@ footer {
       color: #000000;
     }
     a {
+      font-family: 'Inter';
+      font-style: normal;
+      font-weight: 400;
+      font-size: 17px;
+      line-height: 22px;
+      color: #000000;
+      text-decoration: none;
       &:after {
         content: url("../images/foot_by_logo.svg");
         position: relative;

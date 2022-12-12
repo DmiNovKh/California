@@ -40,6 +40,47 @@ header .find_car li {
   }
 }
 
+#button {
+  display: inline-block;
+  background-color: rgba(36, 56, 218, 0.8392156863);
+  width: 50px;
+  height: 50px;
+  text-align: center;
+  border-radius: 40%;
+  position: fixed;
+  bottom: 15%;
+  right: 20px;
+  transition: background-color 0.3s, opacity 0.5s, visibility 0.5s;
+  opacity: 0;
+  visibility: hidden;
+  z-index: 100;
+  text-decoration: none;
+}
+
+#button::after {
+  content: "\f3bf";
+  font-family: "Font Awesome 6 Free";
+  font-weight: 900;
+  font-style: normal;
+  font-size: 1.5em;
+  line-height: 50px;
+  color: #fff;
+}
+
+#button:hover {
+  cursor: pointer;
+  background-color: #0af8b9;
+}
+
+#button:active {
+  background-color: #555;
+}
+
+#button.show {
+  opacity: 1;
+  visibility: visible;
+}
+
 .new_phones {
   background: #DCE5E2;
   border-radius: 32px;
@@ -555,7 +596,7 @@ footer ul li:first-of-type {
 footer ul li:last-of-type {
   margin-bottom: 78px;
 }
-footer a {
+footer ul a {
   font-family: "Inter";
   font-style: normal;
   font-weight: 400;
@@ -576,6 +617,15 @@ footer .by_arrow p {
   font-size: 18px;
   line-height: 22px;
   color: #000000;
+}
+footer .by_arrow a {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 17px;
+  line-height: 22px;
+  color: #000000;
+  text-decoration: none;
 }
 footer .by_arrow a:after {
   content: url("../images/foot_by_logo.svg");
